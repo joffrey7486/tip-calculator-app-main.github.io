@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    background: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo{
+    height: 30%;
+    width: 100vw;
+    background: url(/images/logo.svg) no-repeat;
+    background-position: center;
+}
+.container{
+    height: 490px;
+    width: 920px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.calcul{
+    height: 430px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.calcul .title{
+    color: hsl(183, 100%, 15%);
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+}
+.input input {
+    width: 380px;
+    padding: 10px;
+    background: hsl(189, 41%, 97%);
+    border-radius: 10px;
+    border: none;
+    text-align: right;
+    font-weight: 700;
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+.input ::placeholder{
+    color: #a5bfbc;
+    font-size: 24px;
+}
+.dollars_logo{
+    background: url(/images/icon-dollar.svg) no-repeat;
+    height: 24px;
+    width: 24px;
+    background-size: 16px;
+    position: relative;
+    top: 43px;
+    left: 1rem;
+}
+.people_logo {
+    background: url(/images/icon-person.svg) no-repeat;
+    width: 24px;
+    height: 24px;
+    background-size: 16px;
+    z-index: 1;
+    position: relative;
+    top: 43px;
+    left: 1rem;
+}
+.content_percent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+button.num {
+    height: 50px;
+    width: 110px;
+    background: hsl(183, 100%, 15%);
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+.num.custom{
+    height: 50px;
+    width: 110px;
+    margin-top: 15px;
+    border-radius: 16px;
+    cursor: pointer;
+    background: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+.num:hover{
+    background: #9fe8df;
+    color: hsl(183, 100%, 15%);
+}
+.custom:hover{
+    background: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+}
+.result_card{
+    height: 420px;
+    width: 360px;
+    background: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    padding: 40px 30px 15px 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "tip_amount"
+    "total"
+    "nothing"
+    "reset";
+}
+.result_card p{
+    color: #fff;
+    font-size: 15px;
+}
+.result_card span{
+    color: #7b9ca1;
+    font-size: 12px;
+}
+.tip_amount{
+    grid-area: tip_amount;
+    display: grid;
+    height: 10px;
+    grid-template-areas: 
+    "p result"
+    "span result";
+}
+.tip_amount p{grid-area: p; width: 100px;}
+.tip_amount span{grid-area: span;}
+.tip_amount .result{grid-area: result;}
+.total{
+    grid-area: total;
+    height: 10px;
+    display: grid;
+    grid-template-areas: 
+    "p result"
+    "span result";
+}
+.total p{grid-area: p; width: 100px;}
+.total span{grid-area: span;}
+.total .result{grid-area: result;}
+.result {
+    height: 45px;
+    width: 180px;
+    background: hsl(183, 100%, 15%);
+    border: none;
+    text-align: right;
+    font-size: 30px;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
+}
+.reset{
+    grid-area: reset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reset button{
+    width: 300px;
+    height: 45px;
+    background: #0d686d;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+}
+.reset button:hover{
+    background: #9fe8df;
+    color: hsl(183, 100%, 15%);
+}
+
+@media (max-width: 920px) {
+    .main{
+        height: 120vh;
+    }
+    .container {
+        height: 940px;
+        width: 375px;
+        flex-direction: column;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .calcul{width: 300px; height: 490px;}
+    .input input{width: 290px;}
+    button.num{width: 135px; border-radius: 10px;}
+    .num.custom{width: 135px; border-radius: 10px;}
+    .result_card {
+        grid-template-areas:
+            "tip_amount"
+            "total"
+            "reset";
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 330px;
+        height: 230px;
+    }
+    .reset button{width: 270px;}
+}

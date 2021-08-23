@@ -16,7 +16,7 @@
 .logo{
     height: 30%;
     width: 100vw;
-    background: url(/images/logo.svg) no-repeat;
+    background: url(https://raw.githubusercontent.com/joffrey7486/tip-calculator-app-main.github.io/6703260d1e2eb8834ec28edbb38c28c4a32b7bc8/images/logo.svg) no-repeat;
     background-position: center;
 }
 .container{
@@ -58,7 +58,7 @@
     font-size: 24px;
 }
 .dollars_logo{
-    background: url(/images/icon-dollar.svg) no-repeat;
+    background: url(https://raw.githubusercontent.com/joffrey7486/tip-calculator-app-main.github.io/6703260d1e2eb8834ec28edbb38c28c4a32b7bc8/images/icon-dollar.svg) no-repeat;
     height: 24px;
     width: 24px;
     background-size: 16px;
@@ -67,7 +67,7 @@
     left: 1rem;
 }
 .people_logo {
-    background: url(/images/icon-person.svg) no-repeat;
+    background: url(https://raw.githubusercontent.com/joffrey7486/tip-calculator-app-main.github.io/6703260d1e2eb8834ec28edbb38c28c4a32b7bc8/images/icon-person.svg) no-repeat;
     width: 24px;
     height: 24px;
     background-size: 16px;

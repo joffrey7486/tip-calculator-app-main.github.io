@@ -194,9 +194,8 @@ button.num {
 }
 
 @media (max-width: 920px) {
-    .main{
-        height: auto;
-    }
+    .main{height: auto;}
+    .logo{height: 200px;}
     .container {
         height: 940px;
         width: 375px;

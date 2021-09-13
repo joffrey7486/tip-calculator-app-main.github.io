@@ -195,7 +195,7 @@ button.num {
 
 @media (max-width: 920px) {
     .main{
-        height: 120vh;
+        height: auto;
     }
     .container {
         height: 940px;
